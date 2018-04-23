@@ -1,0 +1,154 @@
+$palette-white:         #ffffff;
+$palette-blue:          #296cb1;
+$palette-lightblue:     #e5f2ff;
+$palette-red:           #FF0000;
+$palette-dark-red:      #A52A2A;
+$palette-green:         #00CA78;
+
+$smart-radius: 4px;
+
+/*Transitions*/
+
+@mixin transition-object-time ($object: all, $time: 0.3s) {
+  -webkit-transition: $object $time;
+  -moz-transition: $object $time;
+  -o-transition: $object $time;
+  -ms-transition: $object $time;
+  transition: $object $time;
+}
+
+@mixin transition-timing-function ($function: ease-in-out) {
+  -webkit-transition-timing-function: $function;
+  -moz-transition-timing-function: $function;
+  -o-transition-timing-function: $function;
+  -ms-transition-timing-function: $function;
+  transition-timing-function: $function;
+}
+
+//.navbar-license{
+//  background-color: $palette-blue;
+//  color: $palette-white;
+//}
+.generator {
+  .mac-address{
+    position: absolute;
+    textArea-MAC{
+      position: absolute;
+    }
+      textarea{
+        width: 100%;
+        margin-right: 15px;
+        position: relative;
+        background: #fff none;
+        z-index: 1;
+        width: 100%;
+        display: block;
+      }
+    .buttons{
+      background: #fff none;
+      position: absolute;
+      bottom: -22px;
+      z-index: 2;
+      border: 1px solid #d4d9e2;
+      right: 0;
+    }
+  }
+  .validation-wrapper {
+    border: 1px solid transparent;
+    -moz-border-radius:     $smart-radius*2; /* Firefox */
+    -webkit-border-radius:  $smart-radius*2; /* Safari, Chrome */
+    -ms-border-radius:      $smart-radius*2; /* IE */
+    -o-border-radius:       $smart-radius*2; /* Opera */
+    border-radius:          $smart-radius*2; /* CSS3 */
+    @include transition-object-time(all, 0.5s);
+    @include transition-timing-function(linear);
+
+    label {
+      margin-top: 7px;
+    }
+
+    &.error-showup {
+      border-color: $palette-red;
+      padding: 8px;
+      &.col-right-fix {
+        margin-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  .error {
+    //margin-top: 5px;
+    font-size: 12px;
+    color: $palette-red;
+    a, a:hover {
+      color: $palette-dark-red !important;
+    }
+  }
+
+  /* Logs */
+  .textarea-wrapper {
+    background-color: $palette-white;
+    border: 1px solid #d4d9e2;
+    border-radius: 3px;
+    //-moz-border-radius:     $smart-radius*2; /* Firefox */
+    //-webkit-border-radius:  $smart-radius*2; /* Safari, Chrome */
+    //-ms-border-radius:      $smart-radius*2; /* IE */
+    //-o-border-radius:       $smart-radius*2; /* Opera */
+    //border-radius:          $smart-radius*2; /* CSS3 */
+    //-o-box-shadow:      none;
+    //-ms-box-shadow:     none;
+    //-moz-box-shadow:    none;
+    //-webkit-box-shadow: none;
+    //box-shadow:         none;
+    padding: 0px 2px 0px 15px ;
+
+
+    @include transition-object-time(all, 0.5s);
+    @include transition-timing-function(ease-out);
+
+    max-height: 0;
+
+    &.open {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      max-height: 200px;
+      //-o-box-shadow:      0 3px 0px #666972 inset;
+      //-ms-box-shadow:     0 3px 0px #666972 inset;
+      //-moz-box-shadow:    0 3px 0px #666972 inset;
+      //-webkit-box-shadow: 0 3px 0px #666972 inset;
+      //box-shadow:         0 3px 0px #666972 inset;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  }
+  .textarea {
+    font-size: 12px;
+    //font-family: $font-thin;
+    //border: 1px solid rgba(47,47,47,0.35);
+    //color: red;
+    text-align: left;
+    min-height: 104px;
+    max-height: 160px;
+    overflow: auto;
+    line-height: 1;
+
+    //div + div {
+    //  margin-top: 4px;
+    //  padding-right: 15px;
+    //}
+
+    .error {
+      color: $palette-red;
+    }
+    .warning {
+      color: $palette-blue;
+    }
+    .success {
+      color: $palette-green;
+    }
+    div{ margin-top: 3px !important;}
+  }
+
+
+}

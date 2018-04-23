@@ -1,0 +1,112 @@
+/* Icons for Application */
+$icon-width-small: 24px;
+$icon-height-small: 20px;
+
+/*Main misbehave corrections*/
+[class^="icon-"], [class*="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*General behave*/
+[class^="icon-"]:not(.sprite):before, [class*="icon-"]:not(.sprite):before {
+  font-family: "spritesheet";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: inherit;
+  width: 1em;
+  //  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  //  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  font-size: 1.6em;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+  transform: translate(0,0);
+}
+
+.sprite {
+  background-image: url('./assets/images/license-icons.svg?5');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: $icon-width-small;
+  height: $icon-height-small;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  &:before {
+    display: none !important;
+  }
+}
+.icon-eye-open           { background-position: -$icon-width-small*0 top; }
+.icon-eye-closed         { background-position: -$icon-width-small*1 top; }
+.icon-avatar             { background-position: -$icon-width-small*2 top; }
+.icon-avatar:hover       { background-position: -$icon-width-small*3 top; }
+.icon-edit               { background-position: -$icon-width-small*4 top; }
+.icon-document           { background-position: -$icon-width-small*5 top; }
+.icon-document-white     { background-position: -$icon-width-small*6 top; }
+.icon-close              { background-position: -$icon-width-small*7 top; }
+.icon-lens               { background-position: -$icon-width-small*8 top; }
+.icon-download-white     { background-position: -$icon-width-small*9 top; }
+.icon-collapse           { background-position: -$icon-width-small*10 top; }
+.icon-expand             { background-position: -$icon-width-small*11 top; }
+.icon-collapse-white     { background-position: -$icon-width-small*12 top; }
+.icon-expand-white       { background-position: -$icon-width-small*13 top; }
+.icon-info               { background-position: -$icon-width-small*14 top; }
+.icon-checkbox           { background-position: -$icon-width-small*15 top; }
+.icon-cb-checked         { background-position: -$icon-width-small*16 top; }
+
+.icon-check              { background-position: -$icon-width-small*17 top; }
+.icon-close              { background-position: -$icon-width-small*18 top; }
+.icon-add-white          { background-position: -$icon-width-small*19 top; }
+
+.icon-zoom{
+  zoom: 1.6;
+  -moz-transform: scale(1.6);
+  margin-left: 2px;
+}
+
+.icon-zoom-out{
+  zoom: 0.6;
+  -moz-transform: scale(0.6);
+}
+
+.checkbox{
+  display: inline-block;
+  margin: 0;
+  input {
+    display: none;
+    & + label {
+      span.sprite{
+        background-position: -360px top;
+      }
+    }
+    &:checked + label {
+      span.sprite{
+        background-position: -384px top;
+      }
+    }
+  }
+}

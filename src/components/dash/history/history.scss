@@ -1,0 +1,98 @@
+.history {
+  .form-group-search{
+    display: inline-block;
+    position: relative;
+    .search{
+      max-width: 170px;
+      margin-left: auto;
+      padding-left: 30px;
+    }
+    .icon-lens{
+      position: absolute;
+      left: 3px;
+      top: 7px;
+    }
+  }
+  .btn-download{
+    min-width: 130px;
+  }
+
+  //Tree view @chinex
+  .tree-panel{
+    border: 0;
+    margin-top: 2px;
+    margin-bottom: 0;
+    //max-height: calc(100vh - 240px);
+    max-height: calc(100vh - 205px);
+    min-height: 50vh;
+    overflow: hidden;
+    overflow-y: auto;
+
+    ul{
+      padding-left: 15px;
+    }
+    label{ padding-left: 0;}
+    .level1-box{
+      margin-bottom: 5px;
+      & > ul{
+        margin: 0;
+        padding-left: 0;
+      }
+      .level1-box-head{
+        height: 30px;
+        border: 1px solid #296cb1;
+        border-radius: 3px;
+        padding: 3px 10px 3px 2px;
+        font-size: 16px;
+        &.open-toogle{
+          background-color: #296cb1;
+          color: #fff;
+        }
+        .sprite{
+          margin-bottom: 2px;
+        }
+      }
+    }
+    .level2-head{
+      background-color: #edecf1;
+      label{ font-weight: bold;}
+    }
+    .level3-head{
+      padding-left: 12px !important;
+    }
+    .last-level{
+      padding-left: 2em;
+    }
+    .bar-item{
+      padding: 5px 10px 0 15px;
+      margin: 0;
+      border-radius: 3px;
+      .sprite{
+        vertical-align: top;
+      }
+      .checkbox{
+        display: inline;
+        & > label{
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+    .tree-date{
+      margin-right: 20px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .button-container{
+      margin: 20px 0 10px;
+    }
+    .search{
+      max-width: 140px;
+    }
+    .text-left-xs{
+      text-align: left;
+      padding-left: 42px;
+    }
+  }
+}
