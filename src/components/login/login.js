@@ -42,6 +42,9 @@ export default {
         //error
       })
     },
+    goToDashboard(){
+      router.push('/generator')
+    },
     resetErrors(){
       this.errors.emptyFields = false;
       this.errors.wrongFields = false;

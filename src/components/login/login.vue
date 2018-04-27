@@ -1,38 +1,18 @@
 <template>
-  <div class="container login">
-    <div class="row">
-      <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12 col-centered">
-        <div class="box-login">
-          <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <!--<img src="../../assets/images/starflex_logo_blue_hat.svg" class="img-responsive logo-login" alt=""/>-->
-              <img src="../../assets/images/starflex_logo_blue.svg" class="img-responsive logo-login" alt=""/>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <div class="form-login">
-                <h3 class="margin-top-0 margin-bottom-20 text-center-xs">Licence Generator</h3>
-                <form v-on:submit.prevent="login()">
-                  <div class="form-group">
-                    <input v-model.trim="username" type="text" placeholder="Username" class="form-control"/>
-                  </div>
-                  <div class="form-group form-group-addon">
-                    <input v-model.trim="password" :type="showPassword? 'text':'password'" placeholder="Password" class="form-control form-control-addon"/>
-                    <span type="button" class="input-group-addon" @click="showPassword = !showPassword">
-                      <span class="sprite hand"
-                            :class="{'icon-eye-open': !showPassword , 'icon-eye-closed':showPassword}" title="Show/Hide password"></span>
-                    </span>
-                  </div>
-                  <p class="text-danger" v-if="errors.emptyFields">Enter username and password value</p>
-                  <p class="text-danger" v-if="errors.wrongFields">Wrong username or password</p>
-                  <button value="login" class="btn btn-primary btn-block" type="submit">Login</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <header class="v-header container">
+    <div class="fullscreen-video-wrap">
+      <!--  https://www.videvo.net/video/typing-on-computer-white-bg/4475/ -->
+      <!-- DO NOT USE THIS VIDEO, I JUST NEEDED A HOSTED VIDEO FOR THIS CODEPEN> USE THE ONE ABOVE -->
+      <video src="https://production.cdmycdn.com/assets/marketing-pages/intensives/bws/coding-scenes-9a2031e8142b40bdb5d936d5eef33dfa.mp4" autoplay="" loop="">
+      </video>
     </div>
-  </div>
+    <div class="header-overlay"></div>
+    <div class="header-content text-md-center">
+      <h1>Welcome Everyone</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus numquam amet impedit explicabo? Debitis quasi ullam aperiam!</p>
+      <a class="btn" v-on:click="goToDashboard()">Find Out More</a>
+    </div>
+  </header>
 </template>
 
 <script src="./login.js"></script>
