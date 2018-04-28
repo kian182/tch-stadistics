@@ -7,7 +7,7 @@
     </div>
     <div class="row">
     <div class="col-sm-offset-1 col-sm-5 col-xs-6">
-        <h3>Licence History</h3></div>
+        <h3>Ficha de Monitoreo</h3></div>
       <div class="col-sm-5 col-xs-6 text-right">
         <div class="form-group form-group-search">
           <span class="sprite icon-lens" @click="search"></span>

@@ -8,9 +8,11 @@
     </div>
     <div class="header-overlay"></div>
     <div class="header-content text-md-center">
-      <h1>Welcome Everyone</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus numquam amet impedit explicabo? Debitis quasi ullam aperiam!</p>
-      <a class="btn" v-on:click="goToDashboard()">Find Out More</a>
+      <h1>TECHO</h1>
+      <p>TECHO es una organización presente en Latinoamérica y El Caribe que busca superar la situación
+        de pobreza que viven miles de personas en los asentamientos precarios, a través de la acción conjunta de
+        sus pobladores y jóvenes voluntarios.</p>
+      <a class="btn" v-on:click="goToDashboard()">Saber mas!</a>
     </div>
   </header>
 </template>

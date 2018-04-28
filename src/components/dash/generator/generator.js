@@ -1,6 +1,8 @@
 import LoginService from './generator.service'
 
 import Vue from 'vue'
+import router from '@/router'
+
 /** Import Generator Components **/
 import inputSelect from "./components/inputSelect/input-select.component.vue"
 
@@ -29,6 +31,8 @@ export default {
 
   },
   methods:{
-
+    goToHistory() {
+      router.push('/history')
+    },
   }
 }
