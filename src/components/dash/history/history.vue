@@ -16,6 +16,15 @@
       </div>
     </div>
     <div class="row margin-bottom-20">
+      <download-excel
+        class   = "btn btn-default"
+        :data   = "json_data"
+        :fields = "json_fields"
+        name    = "filename.xls">
+
+        Download Excel (you can customize this with html code!)
+
+      </download-excel>
       <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-xs-12 text-center button-container">
         <button class="btn btn-primary btn-download" v-if="!isIpad"
                 type="submit" @click="download" :disabled="licensesSelected.length<1">
