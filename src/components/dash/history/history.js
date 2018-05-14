@@ -189,6 +189,7 @@ export default {
 
       })
     },
+
     removeLicenses: function () {
       HistoryService.removeLicenses(this.licensesSelected).then(response => {
         return HistoryService.getLicensesTree(1, this.searchString)
