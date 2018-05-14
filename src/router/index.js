@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '@/store'
 
+import Home from '../components/home/home.vue'
 import Login from '../components/login/login.vue'
 import DashView from '../components/dash/dash.vue'
 import Generator from '../components/dash/generator/generator.vue'
@@ -36,6 +37,11 @@ Vue.use(Router)
 
 const routes = [
   {
+    path: '/home',
+    name: 'home',
+    component: Home
+  },
+  {
     path: '/login',
     name: 'login',
     component: Login
@@ -45,7 +51,8 @@ const routes = [
     component: DashView,
     meta: {requiresAuth: true},
     children: [
-      { path: '',
+      {
+        path: '',
         beforeEnter: (to, from, next) => next('/generator')
       },
       {
@@ -77,7 +84,7 @@ router.beforeEach((to, from, next) => {
   // if (to.matched.some(record => record.meta.requiresAuth) && (!router.app.$store.state.token || router.app.$store.state.token === 'null')) {
   if (to.matched.some(record => record.meta.requiresAuth) && !store.state.isLogged && !localStorage.getItem('token')) {
     window.console.log('Not authenticated')
-    next({name: 'login'})
+    next({name: 'home'})
   } else {
     next()
   }
