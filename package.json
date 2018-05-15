@@ -15,10 +15,11 @@
   },
   "dependencies": {
     "axios": "^0.17.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "latest",
     "expose-loader": "^0.7.3",
     "jquery": "^3.1.1",
     "jszip": "^3.1.5",
+    "popper.js": "^1.14.3",
     "vue": "^2.5.2",
     "vue-infinite-loading": "^2.2.2",
     "vue-json-excel": "^0.2.5",
