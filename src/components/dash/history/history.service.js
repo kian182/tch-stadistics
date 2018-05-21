@@ -15,5 +15,15 @@ export default {
         .catch((error) => Promise.reject(error.response))
     }
     return Promise.all(licIdsForRemove.map(removeLic))
+  },
+
+  uploadFile(formData) {
+    return HTTP.post('/file/upload',formData,{
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    })
+      .then((response) => Promise.resolve(response.data))
+      .catch((error) => Promise.reject(error.response))
   }
 }
