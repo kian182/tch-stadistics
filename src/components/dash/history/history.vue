@@ -6,7 +6,7 @@
       <small>Secondary Text</small>
     </h1>
 
-    <form action="http://10.100.154.253:8000/file/upload" enctype="multipart/form-data" method="post">
+    <form action="http://192.168.1.204:8000/file/upload" enctype="multipart/form-data" method="post">
       <input type="file" name="file-to-upload">
       <input type="submit" value="Upload">
     </form>
