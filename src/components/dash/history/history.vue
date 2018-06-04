@@ -6,9 +6,19 @@
       <small>Secondary Text</small>
     </h1>
 
-    <form action="http://192.168.1.204:8000/file/upload" enctype="multipart/form-data" method="post">
-      <input type="file" name="file-to-upload">
-      <input type="submit" value="Upload">
+    <!--<form action="http://10.100.154.253:8000/file/upload" enctype="multipart/form-data" method="post">-->
+      <!--<input type="file" name="file-to-upload">-->
+      <!--<input type="submit" value="Upload">-->
+    <!--</form>-->
+
+    <form id="uploadForm"
+          enctype="multipart/form-data"
+          action="http://10.100.154.253:8000/file/upload"
+          method="post">
+      <input type="file" name="file-to-upload" multiple />
+      <input type="submit" value="Upload Image" name="submit">
+      <!--<input type='text' id='random' name='random'><br>-->
+      <span id = "status"></span>
     </form>
 
     <!-- /.row -->

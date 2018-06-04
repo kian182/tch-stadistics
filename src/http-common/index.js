@@ -1,8 +1,8 @@
 import axios from 'axios';
 import store from '@/store'
 
-let urlDev = 'http://192.168.1.204:8000/' //change this URL for development mode
-// let urlDev = 'http://10.100.154.253:8000/' //change this URL for development mode
+// let urlDev = 'http://192.168.1.204:8000/' //change this URL for development mode
+let urlDev = 'http://10.100.154.253:8000/' //change this URL for development mode
 let urlProd = 'http://38.107.160.186/'
 
 export const API_ENDPOINT = process.env.NODE_ENV === 'production' ? urlProd:urlDev
